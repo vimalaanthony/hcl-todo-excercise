@@ -1,0 +1,16 @@
+<div>
+<input  type="text" placeholder="Add Todo" [(ngModel)]="todo.name">
+ <button type="submit" class="btn btn-default" (click)="addTodo()">Submit</button>
+ 
+<div>
+   <div>
+   	<h5> Available Todos: {{todos.count}}
+   	</h5>
+   </div>
+   <div *ngFor = "let todo of todo.list"> 
+   <h1 >{{todo}} </h1>
+   <a (click)="deleteTodo(todo)"> Delete</a>
+   </div>
+</div>
+</div>
+
